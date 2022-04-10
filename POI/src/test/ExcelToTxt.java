@@ -33,7 +33,7 @@ public class ExcelToTxt {
 		readExcel(file);
 		out.close();
 	}
-	
+	// read Excel file
 	public void readExcel(FileInputStream file) {
 		XSSFRow row;
 		XSSFCell cell;
@@ -87,12 +87,12 @@ public class ExcelToTxt {
 		}
 		
 	}
-	
+	//write into excel file
 	public void writeFile(String str) throws IOException {
 		str = ","+str;
 		out.write(str);
 	}
-	
+	//activate excel to txt
 	public static void main(String[] args) {
 		try {
 			new ExcelToTxt();
