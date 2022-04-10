@@ -26,7 +26,7 @@ public class ExcelRead {
                 XSSFRow row = sheet.getRow(r); //  행 가져오기
                 if (row != null) {
                     for (c = 0; c < cells; c++) {
-                        XSSFCell cell = row.getCell(c);
+                        XSSFCell cell = row.getCell(c);//셀 가져오기
                         if (cell != null) {
                             String value = "";
                             switch (cell.getCellType()) { // 다양한 형태의 엑셀 파일을 가져와서 집어 넣는다.

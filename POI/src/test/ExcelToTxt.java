@@ -2,6 +2,7 @@ package test;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -25,14 +26,15 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelToTxt {
 	private BufferedWriter out;
-	
+	//Excel to txt
 	public ExcelToTxt() throws IOException {
 		out = new BufferedWriter(new FileWriter("out.txt"));
-		readExcel("./data/서울시CCTV정보.xls");
+		FileInputStream file = new FileInputStream("./data/서울시CCTV정보.xls");
+		readExcel(file);
 		out.close();
 	}
 	
-	public void readExcel(String file) {
+	public void readExcel(FileInputStream file) {
 		XSSFRow row;
 		XSSFCell cell;
 		
