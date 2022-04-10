@@ -9,7 +9,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelRead {
 	public static void main(String[] args) {
-
+		//poi 라이브러리를 이용한 엑셀 파일 읽기 
 		try {
 			FileInputStream file = new FileInputStream("./data/서울시CCTV정보.xls");
 
